@@ -24,7 +24,7 @@ class Settings(BaseSettings):
         env_file=(".env.template", ".env"),
         case_sensitive=False,
         env_nested_delimiter="__",
-        env_prefix="APP_CONFIG__",
+        env_prefix="CONFIG__",
         extra="ignore",
     )
     run: RunConfig = RunConfig()
@@ -33,5 +33,3 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
-print(f"{settings.db.url} bla bla bla")
-print(f"{settings.api.prefix} bla bla bla")
